@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Api-Driven App</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Expense Tracker</div>
+        <nav>
+            Dashboard | Profile | Logout
+        </nav>
+    </header>
+    <main class="container">
+        <section class="add-expense">
+            <h2>Add New Expense</h2>
+            <form>
+                Amount: <input type="number" step="0.01" required><br>
+                Category: <select required>
+                Date: <input type="date" required><br>
+                Note: <input type="text" ><br>
+                <button type="submit">Add Expense</button>
+            </form>
+        </section>
+        <section class="expenses">
+            <h2>Recent Expenses</h2>
+            <ul class="expense-list">
+                <li class="expense-item">
+                    Title: Coffee
+                    Category: Food
+                    Amount: $5.00
+                    Date: 2023-10-15
+                </li>
+                <li class="expense-item">
+                    Title: Transport
+                    Category: Travel
+                    Amount: $15.00
+                    Date: 2023-10-20
+                </li>
+            </ul>
+            <div class="pagination">
+                <button>Previous</button>
+                <span>1 / 5</span>
+                <button>Next</button>
+            </div>
+            <div class="loading hidden">
+                Loading...
+            </div>
+            <div class="error hidden">
+                Something went wrong. Please try again.
+            </div>
+        </section>
+    </main>
+</body>
+</html>
