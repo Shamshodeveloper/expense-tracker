@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Real Api-Driven App</title>
     <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <header class="navbar">
@@ -19,6 +20,12 @@
             <form>
                 Amount: <input type="number" step="0.01" required><br>
                 Category: <select required>
+                    <option value="">Select Category</option>
+                    <option value="food">Food</option>
+                    <option value="travel">Travel</option>
+                    <option value="utilities">Utilities</option>
+                    <option value="entertainment">Entertainment</option>
+                </select><br>
                 Date: <input type="date" required><br>
                 Note: <input type="text" ><br>
                 <button type="submit">Add Expense</button>
