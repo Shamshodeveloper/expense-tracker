@@ -14,27 +14,28 @@
     <main>
         <section class="auth-card">
             <h1>Login</h1>
-            <form action="/login">
-                <div class="login-group">
-                    <label for="email">Email:</label>
-                    <input type="text">
-                </div>
-                <div class="login-group">
-                    <label for = "password">Password: </label> 
-                    <input type="password">
-                </div>
-                <div class="login-group"> 
-                    <button type="submit">Login</button>
-                </div>
+            <form id="loginForm">
+                <input type="email" id="email" placeholder="Email" required />
+                <input type="password" id="password" placeholder="Password" required />
+                <button type="submit">Login</button>
             </form>
-            <div class="register-link">
-                <label>You haven't an account?</label>
-                <a href="http://#" target="_blank">Register</a>
+            <div class="demo-credentials">
+                <small>
+                    Demo access ·
+                    <span>Email:</span> <code>demo@expense.com</code> ·
+                    <span>Password:</span> <code>123456</code>
+                </small>
             </div>
+
+            <div class="error hidden" id="authError"></div>
         </section>
     </main>
     <footer>
         <p>&copy; 2026 Your Company</p>
     </footer>
+    <script type="module">
+        import { initAuth } from './js/auth.js';
+        initAuth();
+    </script>
 </body>
 </html>

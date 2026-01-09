@@ -22,3 +22,16 @@
 .auth-card button {
     margin-top: 1rem;
 }
+
+.demo-credentials {
+    margin-top: 1rem;
+    text-align: center;
+    color: #777;
+}
+
+.demo-credentials code {
+    background: #f1f1f1;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
