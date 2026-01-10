@@ -21,16 +21,22 @@ async function loginRequest (data) {
     return respone.json();
 }
 
-function registerrequest (data) {}
+ async function getExpenses () {
+    const res = await fetch('./assets/expenses.json');
 
-function getExpenses () {}
+    if (!res.ok) {
+        throw new Error('Failed to load expenses');
+    }
+
+    const data = await res.json();
+    return data.expenses;
+ }
 function createExpense (data) {}
 function updateExpense (id, data) {}
 function deleteExpense (id) {}
 
 export {
     loginRequest,
-    registerrequest,
     getExpenses,
     createExpense,
     updateExpense,

@@ -1,0 +1,7 @@
+{
+  "expenses": [
+    { "id": 1, "title": "Coffee", "category": "Food", "amount": 5, "date": "2026-01-05" },
+    { "id": 2, "title": "Taxi", "category": "Transport", "amount": 10, "date": "2026-01-06" },
+    { "id": 3, "title": "Internet", "category": "Utilities", "amount": 20, "date": "2026-01-07" }
+  ]
+}

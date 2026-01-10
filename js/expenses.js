@@ -1,9 +1,21 @@
-function initExpenses () {
+import { getExpenses } from './api.js';
+import { showLoading, hideLoading, showError, renderExpenseList } from './ui.js';
 
+async function loadExpenses() {
+    showLoading();
+    try {
+        const expenses = await getExpenses();
+        renderExpenseList(expenses);
+    }catch (err) {
+        showError(err.message);
+    } finally {
+        hideLoading();
+    }
 }
 
-function loadExpenses() {}
-
+function initExpenses () {
+    loadExpenses();
+}
 function addExpense(data) {}
 
 function editExpense(id, data) {}
