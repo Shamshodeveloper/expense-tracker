@@ -4,5 +4,12 @@ function formatCurrency(amouny) {}
 
 function generateId() {}
 
-export { formatDate, formatCurrency, generateId };
+function getToken () {
+    return localStorage.getItem('token');
+}
 
+function isAuthenticated () {
+    return !!getToken();
+}
+
+export { formatDate, formatCurrency, generateId, isAuthenticated, getToken };

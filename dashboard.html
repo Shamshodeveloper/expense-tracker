@@ -11,7 +11,7 @@
     <header class="navbar">
         <div class="logo">Expense Tracker</div>
         <nav>
-            Dashboard | Profile | Logout
+            Dashboard | Profile <button id="logoutBtn">Logout</button>
         </nav>
     </header>
     <main class="container">
@@ -60,5 +60,14 @@
             </div>
         </section>
     </main>
+    <script type="module">
+        import { isAuthenticated } from './js/utils.js';
+
+        if (!isAuthenticated()) {
+            window.location.href = 'index.html';
+        }
+        import { logout } from './js/auth.js';
+        document.getElementById('logoutBtn')?.addEventListener('click', logout);
+    </script>
 </body>
 </html>

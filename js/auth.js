@@ -44,7 +44,13 @@ function initAuth() {
     }
 }
 
+function logout() {
+    localStorage.removeItem('token');
+    window.location.href = 'index.html';
+}
+
 export {
     initAuth,
-    handleLogin
+    handleLogin,
+    logout
 }

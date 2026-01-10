@@ -36,6 +36,11 @@
     <script type="module">
         import { initAuth } from './js/auth.js';
         initAuth();
+
+        import { isAuthenticated } from './js/utils.js';
+        if ( isAuthenticated()) {
+            window.location.href = 'dashboard.html';
+        }
     </script>
 </body>
 </html>
